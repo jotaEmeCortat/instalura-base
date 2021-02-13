@@ -1,7 +1,7 @@
 import styled, {css} from 'styled-components';
 import get from 'lodash/get'
 
-/* GET()  https://lodash.com/docs/4.17.15#get */
+// GET()  https://lodash.com/docs/4.17.15#get
 const ButtonGhost = css`
   color:${function(props){
     return get(props.theme, `colors.${props.variant}.contrastText`)
