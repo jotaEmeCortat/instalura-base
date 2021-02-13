@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from '../../../assets/Logo/logoLight.js';
+import Text from '../../foundation/Text/index.js';
 import { Button } from '../Button/index.js';
 import { MenuWrapper } from './styles/MenuWrapper.js';
 
@@ -28,7 +29,7 @@ export default function Menu(){
         {links.map((link)=>{
           return(
             <li key={link.url}>
-              <a href={link.url}>{link.text}</a>
+              <Text tag='a' variant='smallestException' href={link.url}>{link.text}</Text>
             </li>
           )
         })}
