@@ -25,7 +25,7 @@ export const Button = styled.button`
   padding: 12px 26px;
   font-weight: bold;
   opacity: 1;
-  ${TextStyleVariantsMap.smallestException}
+  ${TextStyleVariantsMap.smallestException};
   transition: opacity ${({ theme }) => theme.transition};
   border-radius: ${({ theme }) => theme.borderRadius};
   ${({ ghost }) => (ghost ? ButtonGhost : ButtonDefault)}

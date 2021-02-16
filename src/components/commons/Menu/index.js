@@ -29,7 +29,9 @@ export default function Menu(){
         {links.map((link)=>{
           return(
             <li key={link.url}>
-              <Text tag='a' variant='smallestException' href={link.url}>{link.text}</Text>
+              <Text tag='a' variant='smallestException' href={link.url}>
+                {link.text}
+              </Text>
             </li>
           )
         })}
