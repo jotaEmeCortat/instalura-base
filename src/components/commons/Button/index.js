@@ -2,6 +2,7 @@ import styled, {css} from 'styled-components';
 import get from 'lodash/get'
 import {TextStyleVariantsMap} from '../../foundation/Text/index';
 import {breakpointsMedia} from '../../../theme/utils/breakpointsMedia';
+import {propToStyle} from '../../../theme/utils/propToStyle';
 
 
 // GET()  https://lodash.com/docs/4.17.15#get
@@ -48,4 +49,6 @@ ${breakpointsMedia({
     `
   })
 }
+  ${propToStyle('margin')}
+  ${propToStyle('display')}
 `;
