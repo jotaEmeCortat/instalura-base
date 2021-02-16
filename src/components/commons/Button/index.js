@@ -1,6 +1,8 @@
 import styled, {css} from 'styled-components';
 import get from 'lodash/get'
-import { TextStyleVariantsMap } from '../../foundation/Text';
+import {TextStyleVariantsMap} from '../../foundation/Text/index';
+import {breakpointsMedia} from '../../../theme/utils/breakpointsMedia';
+
 
 // GET()  https://lodash.com/docs/4.17.15#get
 const ButtonGhost = css`
@@ -25,7 +27,6 @@ export const Button = styled.button`
   padding: 12px 26px;
   font-weight: bold;
   opacity: 1;
-  ${TextStyleVariantsMap.smallestException};
   transition: opacity ${({ theme }) => theme.transition};
   border-radius: ${({ theme }) => theme.borderRadius};
   ${({ ghost }) => (ghost ? ButtonGhost : ButtonDefault)}
@@ -33,4 +34,18 @@ export const Button = styled.button`
   &:focus {
     opacity: .5;
   }
+
+   //breakpoints https://xstyled.dev/docs/enhanced-styled-components/
+${breakpointsMedia({
+    xs: css`
+      ${TextStyleVariantsMap.smallestException}
+    `,
+    md: css`
+    ${TextStyleVariantsMap.paragraph1}
+    `,
+    lg: css`
+     /* From lg breakpoint */
+    `
+  })
+}
 `;
