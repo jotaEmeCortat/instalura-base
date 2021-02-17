@@ -2,6 +2,8 @@ import Menu from '../src/components/commons/Menu/index';
 import Text from '../src/components/foundation/Text/index';
 import { Button } from '../src/components/commons/Button/index'
 import Footer from '../src/components/Footer/index';
+import { Grid } from '../src/components/foundation/layout/Grid';
+
 
 export default function Home() {
   return (
@@ -14,6 +16,22 @@ export default function Home() {
     }}>
       <Menu />
 
+      <Grid.Container>
+        <Grid.Row>
+          <Grid.Col
+            offset= {{xs: 0,md: 1}}
+            value = {{xs: 12,md: 5}}        
+          >
+            Text
+          </Grid.Col>
+          <Grid.Col
+            value = {{xs: 12,md: 6}}
+          >
+            <img src="http://placehold.it/400x400"/>
+          </Grid.Col>
+        </Grid.Row>
+
+      </Grid.Container>
 
       <div>
         <Text
