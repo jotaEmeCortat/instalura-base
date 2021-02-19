@@ -1,24 +1,25 @@
-import styled, {css} from 'styled-components';
-import get from 'lodash/get'
-import {TextStyleVariantsMap} from '../../foundation/Text/index';
-import {breakpointsMedia} from '../../../theme/utils/breakpointsMedia';
-import {propToStyle} from '../../../theme/utils/propToStyle';
-
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable func-names */
+import styled, { css } from 'styled-components';
+import get from 'lodash/get';
+import { TextStyleVariantsMap } from '../../foundation/Text/index';
+import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
+import { propToStyle } from '../../../theme/utils/propToStyle';
 
 // GET()  https://lodash.com/docs/4.17.15#get
 const ButtonGhost = css`
-  color:${function(props){
-    return get(props.theme, `colors.${props.variant}.contrastText`)
+  color:${function (props) {
+    return get(props.theme, `colors.${props.variant}.contrastText`);
   }};
   background-color:transparent;
 `;
 
-const ButtonDefault = css `
-  background-color:${function(props){
-    return get(props.theme, `colors.${props.variant}.color`)
+const ButtonDefault = css`
+  background-color:${function (props) {
+    return get(props.theme, `colors.${props.variant}.color`);
   }};
-  color:${function(props){
-    return get(props.theme, `colors.${props.variant}.contrastText`)
+  color:${function (props) {
+    return get(props.theme, `colors.${props.variant}.contrastText`);
   }};
 `;
 
@@ -46,7 +47,7 @@ ${breakpointsMedia({
     `,
     lg: css`
      /* From lg breakpoint */
-    `
+    `,
   })
 }
   ${propToStyle('margin')}
