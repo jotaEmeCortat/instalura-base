@@ -1,29 +1,31 @@
-import Footer from '../src/components/Footer/index'
-import Menu from '../src/components/commons/Menu/index'
-import { Button } from '../src/components/commons/Button'
-import { Grid } from '../src/components/foundation/layout/Grid/index'
-import Text from '../src/components/foundation/Text'
-import { Box } from '../src/components/foundation/layout/Box'
+import React from 'react';
+import Footer from '../src/components/Footer/index';
+import Menu from '../src/components/commons/Menu/index';
+import { Button } from '../src/components/commons/Button';
+import { Grid } from '../src/components/foundation/layout/Grid/index';
+import Text from '../src/components/foundation/Text';
+import { Box } from '../src/components/foundation/layout/Box';
 
 export default function Home() {
   return (
     <Box
-    flex="1"
-    display="flex"
-    flexWrap="wrap"
-    flexDirection="column"
-    justifyContent="space-between"
-    backgroundImage="url(/images/bubbles.svg)"
-    backgroundRepeat="no-repeat"
-    backgroundPosition="bottom right"
-  >
+      flex="1"
+      display="flex"
+      flexWrap="wrap"
+      flexDirection="column"
+      justifyContent="space-between"
+      backgroundImage="url(/images/bubbles.svg)"
+      backgroundRepeat="no-repeat"
+      backgroundPosition="bottom right"
+    >
       <Menu />
 
       <Grid.Container
-      marginTop={{
-        xs: '32px',
-        md: '75px',
-      }}>
+        marginTop={{
+          xs: '32px',
+          md: '75px',
+        }}
+      >
         <Grid.Row>
           <Grid.Col
             offset={1}
@@ -69,7 +71,7 @@ export default function Home() {
                 Cadastrar
               </Button>
             </div>
-            </Grid.Col>
+          </Grid.Col>
           <Grid.Col
             value={{ xs: 12, md: 6 }}
           >
@@ -82,5 +84,5 @@ export default function Home() {
       </Grid.Container>
       <Footer />
     </Box>
-  )
+  );
 }

@@ -1,6 +1,6 @@
+/* eslint-disable import/prefer-default-export */
 import { createGlobalStyle } from 'styled-components';
-import  {normalize} from 'styled-normalize'
-
+import { normalize } from 'styled-normalize';
 
 export const GlobalStyle = createGlobalStyle`
  * {
